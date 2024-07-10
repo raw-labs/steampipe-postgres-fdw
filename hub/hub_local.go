@@ -70,7 +70,7 @@ func (l *HubLocal) UpdateConnectionConfig(connectionName, configString string) e
 	log.Printf("[INFO] HubLocal UpdateConnectionConfig: connection: %s, config: %s", connectionName, configString)
 
 	if conn, ok := l.connections[connectionName]; ok && conn.Config == configString {
-		log.printf("[INFO] HubLocal UpdateConnectionConfig skipping update")
+		log.Printf("[INFO] HubLocal UpdateConnectionConfig skipping update")
 		return nil
 	}
 

@@ -27,6 +27,16 @@ standalone: validate_plugin prebuild.go
 	# Change to the new directory to perform operations
 	cd work && \
 	go run generate/generator.go templates . $(plugin) $(plugin_github_url) && \
+	if [ -n "$(plugin_github_version)" ]; then \
+		printf "\n" >> go.mod; \
+		echo "require (" >> go.mod; \
+		if [ -n "$(plugin_github_url)" ]; then \
+			echo "  $(plugin_github_url) $(plugin_github_version)" >> go.mod; \
+		else \
+			echo "  github.com/turbot/steampipe-plugin-$(plugin) $(plugin_github_version)" >> go.mod; \
+		fi; \
+		echo ")" >> go.mod; \
+	fi && \
 	go mod tidy && \
 	$(MAKE) -C ./fdw clean && \
 	$(MAKE) -C ./fdw go && \
@@ -56,6 +66,16 @@ render: validate_plugin prebuild.go
 	# Change to the new directory to perform operations
 	cd work && \
 	go run generate/generator.go templates . $(plugin) $(plugin_github_url) && \
+	if [ -n "$(plugin_github_version)" ]; then \
+		printf "\n" >> go.mod; \
+		echo "require (" >> go.mod; \
+		if [ -n "$(plugin_github_url)" ]; then \
+			echo "  $(plugin_github_url) $(plugin_github_version)" >> go.mod; \
+		else \
+			echo "  github.com/turbot/steampipe-plugin-$(plugin) $(plugin_github_version)" >> go.mod; \
+		fi; \
+		echo ")" >> go.mod; \
+	fi && \
 	go mod tidy
 
 	# Note: The work directory will contain the full code tree with rendered changes

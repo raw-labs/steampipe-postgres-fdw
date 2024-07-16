@@ -12,7 +12,8 @@ require (
 	github.com/turbot/go-kit v0.10.0-rc.0
 	//main 7cb8edd1b25cfc85e9d5c56786fecf4f0ead9339 (fix: do not abort when unrelated connections are not yet loaded)
 	github.com/turbot/steampipe v1.7.0-rc.0.0.20240417105518-bd915693c2ea
-	github.com/turbot/steampipe-plugin-sdk/v5 v5.11.0-alpha.1
+	github.com/turbot/steampipe-plugin-sdk/v5 v5.11.0-alpha.1.patch-2
+	//github.com/turbot/steampipe-plugin-sdk/v5 v5.11.0-alpha.1
 	go.opentelemetry.io/otel v1.26.0
 	google.golang.org/protobuf v1.34.1
 )
@@ -196,5 +197,6 @@ replace (
 	github.com/mattn/go-mastodon => github.com/turbot/go-mastodon v0.0.1
 	github.com/piquette/edgr => github.com/e-gineer/edgr v0.0.2-0.20210901021602-7664639af765
 	github.com/vartanbeno/go-reddit/v2 => github.com/abhiturbot/go-reddit/v2 v2.0.0-20220917030010-f0fe7d8ac15c
+	github.com/turbot/steampipe-plugin-sdk/v5 => github.com/raw-labs/steampipe-plugin-sdk/v5 v5.11.0-alpha.1-patch-2
 	oras.land/oras-go => oras.land/oras-go v1.1.0
 )

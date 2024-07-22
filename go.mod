@@ -197,6 +197,6 @@ replace (
 	github.com/mattn/go-mastodon => github.com/turbot/go-mastodon v0.0.1
 	github.com/piquette/edgr => github.com/e-gineer/edgr v0.0.2-0.20210901021602-7664639af765
 	github.com/vartanbeno/go-reddit/v2 => github.com/abhiturbot/go-reddit/v2 v2.0.0-20220917030010-f0fe7d8ac15c
-	github.com/turbot/steampipe-plugin-sdk/v5 => github.com/raw-labs/steampipe-plugin-sdk/v5 v5.11.0-alpha.1-patch-2
+	github.com/turbot/steampipe-plugin-sdk/v5 => github.com/raw-labs/steampipe-plugin-sdk/v5 v5.11.0-alpha.1-patch-3
 	oras.land/oras-go => oras.land/oras-go v1.1.0
 )
